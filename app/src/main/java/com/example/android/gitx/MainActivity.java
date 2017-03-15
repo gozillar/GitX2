@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         */
     }
 
+    // send GET request with location and language parameters
     private void fetchUsersData() {
         String searchParams = "language:java location:lagos";
         ApiInterface apiService = apiClient.getService();
@@ -85,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //setup RecyclerView object
     private void configureViews() {
         mRecyclerView = (RecyclerView) findViewById(R.id.user_recycler_view);
         mRecyclerView.setHasFixedSize(true);
@@ -92,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
     }
 
+    //check for Network availability
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
