@@ -1,7 +1,6 @@
 package com.example.android.gitx;
 
 import android.content.Context;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.customtabs.CustomTabsIntent;
@@ -17,13 +16,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-
-import org.w3c.dom.Text;
-
 import me.saket.bettermovementmethod.BetterLinkMovementMethod;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 import com.example.android.gitx.model.User;
 import com.example.android.gitx.util.ShareUtils;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class UserDetails extends AppCompatActivity {
 
@@ -90,7 +87,6 @@ public class UserDetails extends AppCompatActivity {
     private void shareProfile() {
 
         User user = getIntent().getParcelableExtra("user");
-
 
         String message = "Check out this awesome developer @" + user.getLogin() + ", " + user.getUrl();
 
